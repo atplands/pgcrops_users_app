@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:foodpanda_users_app/assistantMethods/address_changer.dart';
 import 'package:foodpanda_users_app/assistantMethods/cart_Item_counter.dart';
 import 'package:foodpanda_users_app/assistantMethods/total_amount.dart';
-import 'package:foodpanda_users_app/global/global.dart';
-import 'package:foodpanda_users_app/splashScreen/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'global/global.dart';
+import 'splashScreen/splash_screen.dart';
 
-Future<void> main() async {
+
+
+Future<void> main() async
+{
   WidgetsFlutterBinding.ensureInitialized();
 
   sharedPreferences = await SharedPreferences.getInstance();
@@ -17,6 +20,8 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 
+
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -24,9 +29,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (c) => CartItemCounter()),
-        ChangeNotifierProvider(create: (c) => TotalAmount()),
-        ChangeNotifierProvider(create: (c) => AddressChanger()),
+        ChangeNotifierProvider(create: (c)=> CartItemCounter()),
+        ChangeNotifierProvider(create: (c)=> TotalAmount()),
+        ChangeNotifierProvider(create: (c)=> AddressChanger()),
       ],
       child: MaterialApp(
         title: 'Riders App',
@@ -39,3 +44,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
