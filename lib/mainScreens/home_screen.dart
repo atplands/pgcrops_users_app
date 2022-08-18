@@ -9,6 +9,7 @@ import 'package:foodpanda_users_app/models/sellers.dart';
 import 'package:foodpanda_users_app/widgets/sellers_design.dart';
 import 'package:foodpanda_users_app/widgets/my_drawer.dart';
 import 'package:foodpanda_users_app/widgets/progress_bar.dart';
+import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 
 
 
