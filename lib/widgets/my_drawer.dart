@@ -114,7 +114,7 @@ class MyDrawer extends StatelessWidget
                   ),
                   onTap: ()
                   {
-
+                      Navigator.push(context, MaterialPageRoute(buider: (c)=> SearchScreen()));
                   },
                 ),
                 const Divider(
